@@ -1,0 +1,7 @@
+proyecto del curso
+DJANGO FULLSTACK POSTGRESQL - RENDER.COM deployed
+
+como administrador de proyectos para codigo de github-links  
+
+deploy en Heroku, render, PythonAnyWhere, githubPages, DigitalOcean
+
