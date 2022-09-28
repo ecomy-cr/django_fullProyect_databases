@@ -5,3 +5,5 @@ como administrador de proyectos para codigo de github-links
 
 deploy en Heroku, render, PythonAnyWhere, githubPages, DigitalOcean
 
+
+            <time data-time="#">{{ post.timestamp|naturaltime }}</time>

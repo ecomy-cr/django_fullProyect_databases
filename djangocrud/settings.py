@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tasks', 'oficiales',
+    'tasks', 'oficiales', 'blog',
 ]
 
 MIDDLEWARE = [
@@ -145,3 +145,14 @@ LOGIN_URL = '/signin'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+"""
+STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_REDIRECT_URL = 'feed'
+LOGIN_URL = 'login'
+
+
+"""

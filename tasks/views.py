@@ -52,7 +52,7 @@ def tasks_completed(request):
 @login_required
 def create_task(request):
     if request.method == 'GET':
-        return render(request, 'create_task.html', {
+        return render(request, 'crear_nueva_tarea.html', {
             'form': TaskForm
         })
     else:
@@ -63,7 +63,7 @@ def create_task(request):
             new_task.save()
             return redirect('tasks')
         except ValueError:
-            return render(request, 'create_task.html', {
+            return render(request, 'crear_nueva_tarea.html', {
                 'form': TaskForm,
                 'error': 'Please provide valida data'
             })

@@ -34,10 +34,14 @@
                 <li class="nav-item">
                     <a href="/tasks/" class="nav-link">Tareas</a>
                 </li>
-    
                 <li class="nav-item">
                     <a href="/oficiales/" class="nav-link">Oficiales</a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="/blog/" class="nav-link">Blog</a>
+                </li>
+
     
                 <li class="nav-item">
                     <a href="/logout" class="nav-link">Logout</a>
@@ -72,23 +76,42 @@
     {% endblock %}
 
 
-    {% if not user.is_authenticated %}
-    <p>Inicia sesión o crea una cuenta para ver los proyectos creados.</p>
-    <br>
     <hr>
 
-    <div class="text-center">
-        <a class="btn btn-secondary" href="/signin/">
-            Iniciar Sesión | Sign in
-        </a>
-        <a class="btn btn-dark" href="/signup/">
-            Crear cuenta | Sign up
-        </a>
-    </div>
-    {% endif %}
+    <main class="container py-5">
+        <section >
+            {% if not user.is_authenticated %}
+            <div class="text-center">
+        
+                <p>Inicia sesión o crea una cuenta para ver los proyectos creados.</p>
+                <br>
+                <a class="btn btn-secondary" href="/signin/">
+                    Iniciar Sesión | Sign in
+                </a>
+                <a class="btn btn-dark" href="/signup/">
+                    Crear cuenta | Sign up
+                </a>
+            </div>
+            
+            {% else %}
+            <hr>
+            <div class="text-center">
+                <a href="/oficiales/" class="btn btn-secondary">
+                    oficiales
+                </a>
+                 
+                <a href="/tasks/" class="btn btn-danger">
+                    Tareas Fazt
+                </a>
+                 
+                <a href="/blog/" class="btn btn-primary">
+                    blog
+                </a>
+            </div>
+            {% endif %}
 
-
-
+        </section>
+    </main>
 </body>
 
 </html>
